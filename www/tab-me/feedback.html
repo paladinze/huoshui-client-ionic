@@ -1,0 +1,19 @@
+<ion-view view-title="问题反馈 （有问必答）">
+    <ion-content >       
+        
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="称呼（选填）：昵称即可" ng-model="feedback.name">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="联系（选填）：邮箱, 手机, QQ, 微信" ng-model="feedback.phone">
+          </label>
+          <label class="item item-input">
+              <textarea placeholder="反馈（必填）：有问必答，绝对保密" style="height:200px;" ng-model="feedback.comment"></textarea>
+          </label>
+          <button class="button button-full button-positive" ng-click="submitFeedback()">发送</button>
+
+        </div>
+
+    </ion-content>
+</ion-view>

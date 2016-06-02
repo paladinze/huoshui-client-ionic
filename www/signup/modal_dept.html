@@ -1,0 +1,20 @@
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        
+      <h1 class="title">选择学院</h1>
+      <button class="button button-clear button-primary" ng-click="modalDeptComplete()">完成</button>
+    </ion-header-bar>
+      
+    <ion-content class="">
+        
+        <ion-checkbox ng-repeat="dept in deptOptions track by dept.id"
+                      ng-model="dept.checked" 
+                      ng-checked="dept.checked"
+                      ng-change="deptCheckChanged(dept)" 
+                      ng-disabled="deptChecked==deptLimit && !dept.checked">
+          {{ dept.value }}
+        </ion-checkbox>         
+        
+        
+    </ion-content>
+  </ion-modal-view>

@@ -1,0 +1,41 @@
+<ion-view view-title="{{title}}">
+	<ion-content class="scroll-bg-1">
+
+		<div class="list">
+
+			<a class="item " ng-click="gotoProfReview(course)"  ng-repeat="course in displayCourses" >
+
+				<div class="row">
+					<div class="col-20">
+						<div style="padding-right: 25px;text-align:center">
+							<h2 ng-class="{'text-positive': ($index==0 || $index==1 || $index==2),
+                                            'text-grey': ($index!=0 && $index!=1 && $index!=2),
+                                          }" >
+                                {{$index + 1}}
+                            </h2>
+							<p style="    color: #E54D42;
+                                font-size: 12px;
+                                border-radius: 2px;
+                                border-color: #E54D42;
+                                border-style: solid;
+                                border-width: 1px;"
+                               ng-click="addToCollection(course.objectId); $event.stopPropagation();">关注</p>
+						</div>
+					</div>
+					<div class="col-80">
+						<h2 style="font-size: 15px">{{course.name}}</h2>
+						<p>{{course.prof}}</p>
+					</div>
+					<span style="float:right; right: 8%; position: absolute;">
+						<h2 style="font-size:15px">{{course.rateOverall  | number: 1}}分</h2>
+					</span>
+				</div>
+			</a>
+
+		</div>
+
+		<p ng-show="showNotFoundMsg" style="text-align: center">暂时没有符合条件的评价,<br>现在分享你的体验正是时候!</p>
+
+
+	</ion-content>
+</ion-view>

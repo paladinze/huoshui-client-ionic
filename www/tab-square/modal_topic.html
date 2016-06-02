@@ -1,0 +1,36 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">发起议题</h1>
+        <button class="button button-clear button-primary" 
+                ng-click="modal_topic.hide()">
+            取消
+        </button>
+    </ion-header-bar>
+
+    <ion-content class="scroll-bg-1">
+
+        <div class="list list-inset">   
+			<label class="item item-input">
+				<textarea placeholder="议题" style="height:30px;" 
+						  ng-model="feedback.content"></textarea>
+			</label>
+			<label class="item item-input">
+				<textarea placeholder="正方立场" style="height:100px;" 
+						  ng-model="feedback.content"></textarea>
+			</label>
+			<label class="item item-input">
+				<textarea placeholder="反方立场" style="height:100px;" 
+						  ng-model="feedback.content"></textarea>
+			</label>
+			<label class="item item-input">
+				<textarea placeholder="中立立场" style="height:100px;" 
+						  ng-model="feedback.content"></textarea>
+			</label>			
+			<button class="button button-full button-positive" 
+					ng-click="createContact(newUser)">发送</button>
+
+        </div>
+
+
+    </ion-content>
+</ion-modal-view>

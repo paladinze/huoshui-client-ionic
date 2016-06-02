@@ -1,0 +1,23 @@
+
+/*-------------------------
+* The Heading Card of each page
+__________________________*/
+
+.item-head {
+ border-top: 2px solid white;   
+}
+
+
+a.item.item-head {
+	border-top: 2px solid white;   
+    background: $positive;
+}
+
+a.item.item-head p{
+	color: white;
+}
+
+a.item.item-head h2{
+	color: white;
+}
+

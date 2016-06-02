@@ -1,0 +1,205 @@
+<ion-view view-title="你说了算">
+
+  <ion-nav-buttons side="right">
+    <button class="button button-clear " ng-click="submitEntry()">发送</button>
+  </ion-nav-buttons>
+
+    <ion-content class="padding " style="padding:0px" has-bouncing="false">
+
+        <div class="card card-review-input" style="margin:0;" ng-click="modal_target.show()">
+            <div class="card-heading">
+                <div class="row" style="margin-bottom: 10px" >
+                    <p>评价对象</p>
+                </div>
+            </div>
+
+            <div class="card-content" style="margin-bottom: 10px" >
+                <label class="item item-input item-select">
+                    <p>选择课程：</p>
+                    <select ng-model="courseInfo.selectedOption"
+                            ng-options="option.name for option in courseInfo.allOptions track by option.objectId">
+                    </select>
+                </label>
+            </div>
+        </div>
+
+
+
+        <div class="card card-review-input" style="margin:0;">
+            <div class="card-heading">
+                <div class="row" >
+                    <p>总体评价</p>
+                </div>
+            </div>
+
+            <div class="card-content" style="margin-bottom: 15px;">
+                <div class="row ">
+                    <div class="col-25" >
+                        <p style="height:15px; line-height:30px;">专业水平：</p>
+                    </div>
+                    <div class="col-75 positive">
+                        <rating ng-model="reviewRating.rate1" ng-change="updateOverallRating()" max="5"></rating>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-25" >
+                        <p style="height:15px; line-height:30px;">表达能力：</p>
+                    </div>
+                    <div class="col-75 positive">
+                        <rating ng-model="reviewRating.rate2" ng-change="updateOverallRating()"  max="5"></rating>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-25" >
+                        <p style="height:15px; line-height:30px;">亲和力：</p>
+                    </div>
+                    <div class="col-75 positive">
+                        <rating ng-model="reviewRating.rate3"  ng-change="updateOverallRating()" max="5"></rating>
+                    </div>
+                </div>
+
+                <span class="review-grade-text" style="top:135px">
+                    <p style="margin-bottom: 0px">
+                        <span style="color: #E54D42">{{reviewRating.overall / 3 | number: 1}}</span> / <span style="color: #E54D42">5.0分</span></p>
+                    <p><span style="color: #E54D42">（{{reviewGrade}}）</span></p>
+                </span>
+
+                <!--
+                <span class="review-grade-icon" ng-switch on="grade">
+                   <img ng-switch-when="0" src='img/bad.png' width="80%">
+                   <img ng-switch-when="1" src='img/okay.png' width="80%">
+                   <img ng-switch-when="2" src='img/good.png' width="80%">
+                   <img ng-switch-default   src='img/bad.png' width="80%">
+                </span>
+                -->
+            </div>
+        </div>
+
+        <div class="card card-review-input" style="margin:0;">
+            <div class="card-heading">
+                <div class="row" >
+                    <p>短评（最多300字）</p>
+                </div>
+            </div>
+
+          <label class="item item-input">
+            <textarea placeholder="你对课程和老师的看法："  maxlength="300" style="height:135px;" ng-model="reviewComment.text"></textarea>
+          </label>
+        </div>
+
+        <div class="item item-divider" style="padding-top:20px; padding-bottom:20px">
+			<p style="text-align:center; color: #E54D42; font-weight:bold">以下内容为选填</p>
+            <p style="text-align:center; color: #E54D42; font-weight:bold">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </p>
+		</div>
+
+        <div class="card card-review-input" style="margin:0;" ng-click="modal_tag.show()">
+            <div class="card-heading">
+                <div class="row" style="margin-bottom: 10px" >
+                    <p>标签 (选填：限三个）</p>
+                </div>
+            </div>
+
+            <div class="card-content" style="margin-bottom: 10px" >
+                <ul class="tags">
+                  <li ng-if="reviewTags.length == 0"><a class="tag">（未选择）</a></li>
+                  <li ng-repeat="tag in tagOptions" ng-if="tag.checked"><a class="tag">{{tag.value}}</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="card card-review-input" style="margin:0;">
+            <div class="card-heading">
+                <div class="row" >
+                    <p>课程体验（选填）</p>
+                </div>
+            </div>
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  水课鉴定：
+                </div>
+                <select name="birdSelect"
+                        id="birdSelect"
+                        ng-model="birdInfo.selectedOption"
+                        ng-options="option.name for option in birdInfo.allOptions track by option.id">
+                </select>
+              </label>
+			<label class="item item-input item-select">
+                <div class="input-label">
+                  点名情况：
+                </div>
+                <select name="attendanceSelect"
+                        id="attendanceSelect"
+                        ng-model="attendanceInfo.selectedOption"
+                        ng-options="option.name for option in attendanceInfo.allOptions track by option.id">
+                </select>
+              </label>
+              <label class="item item-input item-select" style="margin-bottom:10px;">
+                <div class="input-label">
+                  作业量：
+                </div>
+                <select name="homeworkSelect"
+                        id="homeworkSelect"
+                        ng-model="homeworkInfo.selectedOption"
+                        ng-options="option.name for option in homeworkInfo.allOptions track by option.id">
+                </select>
+              </label>
+        </div>
+
+        <div class="card card-review-input" style="margin:0;">
+            <div class="card-heading">
+                <div class="row" >
+                    <p>考试体验（选填）</p>
+                </div>
+            </div>
+            <div class="card-content">
+				<form name="examForm">
+					<ion-toggle ng-model="examInfo.touched"
+								ion-toggle-text="是;否"
+								name="examToggle"
+								ng-change="examReset(examInfo.touched)"
+								toggle-class="toggle-positive">
+						已参加试卷考（点击展开更多）
+					</ion-toggle>
+                <div ng-show="examInfo.touched">
+					<ion-toggle ng-model="examInfo.openbook.checked"
+								ion-toggle-text="是;否"
+								name="examB"
+								ng-change="examSetTouched('B')"
+								toggle-class="toggle-positive">
+						开卷
+					</ion-toggle>
+                    <ion-toggle ng-model="examInfo.examprep.checked"
+								ion-toggle-text="是;否"
+								name="examA"
+								ng-change="examSetTouched('A')"
+								toggle-class="toggle-positive">
+						划重点
+					</ion-toggle>
+					<ion-toggle ng-model="examInfo.oldquestion.checked"
+								ion-toggle-text="是;否"
+								name="examC"
+								ng-change="examSetTouched('C')"
+								toggle-class="toggle-positive">
+						做过的原题较多
+					</ion-toggle>
+					<ion-toggle ng-model="examInfo.easiness.checked"
+								ion-toggle-text="松;严"
+								name="examD"
+								ng-change="examSetTouched('D')"
+								toggle-class="toggle-positive">
+						给分比较宽松
+					</ion-toggle>
+                </div>
+				</form>
+            </div>
+        </div>
+
+
+    </ion-content>
+</ion-view>

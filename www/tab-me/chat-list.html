@@ -1,0 +1,36 @@
+
+
+
+<ion-view view-title="实时交大">
+  <ion-content>
+
+    <div class="central-spinner"
+         ng-if="!connectStatus.isConnected"
+         style="display:block; margin:auto;text-align: center;
+    position: relative;
+    top: 200px;"  >
+        <div class="inner-circles-loader" >
+        </div>	  
+        <p>加载中</p>
+    </div>
+
+      
+      
+	<div class="list" ng-if="connectStatus.isConnected">
+		<div class="item item-avatar" 
+		ng-click="gotoRoom(room.objectId)"
+		ng-repeat="room in chatRooms">
+                <img src="img/dept/{{room.img}}">
+                <h2>{{room.title}}</h2>
+                <p>{{room.tagline}}</p>
+            
+            <!--
+					<span style="float:right; right: 8%; position: absolute; top: 22px">
+						<h2 style="font-size:15px">{{room.count}}人在线</h2>
+					</span>
+            -->
+		</div>	
+	</div>
+
+  </ion-content>
+</ion-view>

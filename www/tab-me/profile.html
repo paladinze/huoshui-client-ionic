@@ -1,0 +1,76 @@
+<ion-view view-title="">
+    
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="showEditProfile()" ng-disabled="user.username == '游客'">编辑</button>
+    </ion-nav-buttons>   
+    
+    <ion-content class="scroll-bg-1">
+
+		<div class="profile-head">
+			<div class="head-content">
+				<img src="img/dept/profile.png">
+				<h5>{{user.username}}</h5>	
+			</div>
+		</div>
+		
+		<!--
+		<div class="item" >
+			<div class="row">
+				<div class="col-33">
+					<p>签名</p>
+				</div>
+				<div class="col-67">
+					<p><b>{{user.motto || "输入签名..."}}</b></p>
+				</div>
+			</div>		
+		</div>
+        -->
+
+		<div class="item" >
+			<div class="row">
+				<div class="col-33">
+					<p>邮箱</p>
+				</div>
+				<div class="col-67">
+					<p><b>{{user.email }}</b></p>
+				</div>
+                <span><p></p></span>
+                
+			</div>		
+		</div>
+        <div class="item" >
+			<div class="row">
+				<div class="col-33">
+					<p>年级</p>
+				</div>
+				<div class="col-67">
+					<p><b>{{user.year}}级</b></p>
+				</div>
+                <span><p></p></span>
+                
+			</div>		
+		</div>
+		<div class="item" >
+			<div class="row">
+				<div class="col-33">
+					<p>学院</p>
+				</div>
+				<div class="col-67">
+					<p><b>{{user.dept}}</b></p>
+				</div>
+			</div>		
+		</div>		
+		<div class="item" >
+			<div class="row">
+				<div class="col-33">
+					<p>学校</p>
+				</div>
+				<div class="col-67">
+					<p><b>西南交通大学</b></p>
+				</div>
+			</div>		
+		</div>		
+		
+		
+    </ion-content>
+</ion-view>

@@ -1,0 +1,426 @@
+
+
+/*-------------------------
+* Custom icons 
+__________________________*/
+
+@font-face {
+    font-family: 'fontawesome';
+    src:url('../fonts/fontawesome-webfont.eot');
+    src:url('../fonts/fontawesome-webfont.eot') format('embedded-opentype'),
+        url('../fonts/fontawesome-webfont.woff') format('woff'),
+        url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+        url('../fonts/fontawesome-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon-sun:before {
+    font-family: "fontawesome";
+    content: "\f185";
+}
+
+.icon-moon:before {
+    font-family: "fontawesome";
+    content: "\f186";
+}
+
+
+/*-------------------------
+* Showcase Card
+__________________________*/
+
+.item.showcase-head {
+    
+    border-top: 2px solid white;   
+    border-bottom: solid 0px $positive;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+    padding-bottom: 0px;
+    padding-top: 20px;
+    background-color: $positive;  //rgba(241,241,241,1);    
+    
+}
+
+.button-tabbed {
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+}
+
+.button-tabbed a.button {
+    border-top-left-radius: 5px;    
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;    
+    border-bottom-right-radius: 0px;     
+    padding-left: 35px;
+    padding-right: 35px;
+    border-width: 0px;
+    line-height: 32px;
+    min-height: 0px;
+}
+
+
+.button-tabbed a.button.button-balanced {
+    border-bottom: solid 3px $positive;
+}
+.button-tabbed a.button.button-balanced.activated {
+    background-color: $balanced;
+}
+
+.button-tabbed a.button.button-energized {
+    color: $positive;
+    border-bottom: solid 3px $energized;
+
+}
+
+.button-tabbed a.button.button-energized.activated {
+    background-color: $energized;
+    color: $positive;
+}
+
+
+.button-tabbed a.button.button-positive.activated {
+    background-color: $positive;
+    
+}
+
+
+
+.card.card-review-showcase {
+    margin:0px;
+    
+}
+
+.card.card-review-showcase .item.showcase-meta {
+    //padding: 5px 5px 5px 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+}
+
+.card.card-review-showcase .item.showcase-meta .item-avatar {
+    padding-left: 55px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    min-height: 0px;
+    
+    background-color: $positive-transparent;
+}
+
+.card.card-review-showcase .item.showcase-meta .item-avatar img {
+    top:20px;
+}
+
+.card.card-review-showcase .item.showcase-meta .item-avatar h2 {
+    font-weight:normal; font-size: 15px
+}
+.card.card-review-showcase .item.showcase-meta .item-avatar p {
+    font-weight:normal; font-size: 13px
+}
+
+.card.card-review-showcase .item.showcase-content {
+    border-top-width: 0px;
+    border-bottom: 3px $balanced solid;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.card.card-review-showcase .item.showcase-content p {
+    color: black;
+}
+
+
+
+
+/*-------------------------
+* Rank Card
+__________________________*/
+
+.item.rank-head {
+     border-top: 2px solid white;   
+    background-color: $positive;
+}
+
+.rank-head .button-bar {
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rank-head .button-bar .button {
+	font-size: 14px;
+    line-height: 30px;
+	height: 30px;
+	min-height: 30px
+}
+
+.rank-filter-label {
+	float: right;
+	border-color: #E87B7B;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	line-height: 24px;
+	padding: 2px;
+	position: absolute;
+	right: 25px;
+	top: 20px;
+}
+
+
+
+/*-------------------------
+* Debate Card
+__________________________*/
+
+
+
+.card-debate .item.heading.activated {
+    background-color: white;
+}
+
+
+.card-debate .heading h2 {
+    font-weight:bolder;
+    font-size:16px;
+    margin-bottom:5px
+}
+
+.card-debate .heading p {
+    color: black;
+    font-size:13px;
+}
+
+.card-debate .top-opinion {
+    //color: black;
+    padding-top:8px;
+}
+
+.card-debate .top-opinion p {
+    //color: black;
+    font-size:13px;
+}
+
+//detail page
+.card-debate .opinion .meta {
+    margin-bottom: 5px;
+}
+
+
+.card-debate .opinion p {
+    color: black;
+}
+
+.card-debate .opinion .dig  {
+    margin-top: 10px;
+    color: grey;
+}
+
+
+
+
+
+
+/*-------------------------
+* The Heading Card of each page
+__________________________*/
+
+.card-head {
+ border-top: 2px solid white;   
+}
+
+.card-head .item{
+  background: $positive;
+}
+
+.card-head .item p {
+  color: white;
+  //font-size: 15px;
+	font-size: 4.25vw;
+	margin-bottom: 0.60vw;
+  font-weight: normal;
+}
+
+.card-head .item-select select {
+    color: white;
+    background: $positive;
+}
+
+.card-head .row {
+    padding-left: 0px;
+}
+
+.card-head .item-input {
+    border-color: $positive;
+    padding-left: 0px;
+}
+
+
+/*-------------------------
+* Stats Card
+__________________________*/
+
+
+.card .card-stat {
+ border-top: 2px solid $positive; 
+ border-bottom: 2px solid rgba(128, 128, 128, 0.47);
+}
+
+.card-stat .card-heading p {
+    color: $positive;
+    margin: 0px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/*-------------------------
+* Review Card
+__________________________*/
+
+.card-review {
+ border-top: 1px solid rgba(128, 128, 128, 0.47);
+ border-bottom: 1px solid rgba(128, 128, 128, 0.47);
+ padding-left:5px;
+ padding-right:5px;
+ margin: 0 !important;
+
+}
+
+.card-review .heading{
+	padding-right: 10px;
+}
+
+.card-review .heading p{
+	margin-top: 3px;
+	margin-bottom: 2px;
+
+}
+
+.card-review .body{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.card-review .heading .date {
+	color: gray;
+	font-size: 13px;
+}
+
+
+.card-review .content{
+	
+}
+
+.card-review .tags{
+	
+}
+
+.card-review .dig {
+	margin-top: 5px;
+}
+
+
+
+.card-review .card-heading p {
+    color: $positive;
+    margin: 0px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------
+* review input Card
+__________________________*/
+
+//review grade text
+.review-grade-text {
+    position: absolute;
+    top: 165px;
+    right: 20px;
+}
+
+.review-grade-text p {
+    font-weight: bold;
+}
+
+
+
+
+
+//review grade icon
+.review-grade-icon {
+    position: absolute;
+    top: 145px;
+    right: 15px;
+}
+
+.review-grade-icon img {
+    width: 75px;
+    float: right;
+    position: relative;
+}
+
+.card-review-input {
+    border-top: 1px solid rgba(128, 128, 128, 0.47);
+    padding-left:15px;
+    padding-right: 15px;
+}
+
+.card-review-input .item-input {
+    padding-left: 0px;
+}
+
+.card-review-input .card-heading p {
+    color: $positive;
+    margin: 0px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card-review-input .row {
+    padding: 5px 0px 5px 0px;   
+}
+
+.card-review-input .item-input {
+    border-color: white;
+    padding: 0;
+    padding-left: 0px;
+}
+
+.card-review-input .item-input .input-label {
+    font-size: 14px;
+}
+
+.card-review-input .card-content .item-toggle {
+    font-size: 14px;
+    padding-left: 0px;
+}
+
+.card-review-input .card-content .item {
+    border-color: white;
+}
+
+
+

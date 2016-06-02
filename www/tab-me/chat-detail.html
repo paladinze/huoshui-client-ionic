@@ -1,0 +1,75 @@
+      <ion-view id="userMessagesView"
+                cache-view="false" 
+                view-title="<i class='icon ion-chatbubble user-messages-top-icon'></i> 
+                            <div class='msg-header-username'>{{roomTitle}}</div>">
+        
+ 
+          <ion-content has-bouncing="true" 
+                       class="has-header has-footer scroll-bg-1" 
+                       delegate-handle="userMessageScroll">
+            
+              <div ng-repeat="message in allMsg"
+                   class="message-wrapper">
+      
+                  <div ng-if="clientId !== message.author">
+                      
+                    <img class="profile-pic left" 
+                          ng-src="{{userPic}}" />
+      
+                      <div class="chat-bubble left">
+      
+                          <div class="message" ng-bind-html="message.text">
+                          </div>
+      
+                          <div class="message-detail">
+                              <span class="bold">{{message.author}}</span>,
+                              <span am-time-ago="message.date"></span>
+                          </div>
+      
+                      </div>
+                  </div>
+      
+                  <div ng-if="clientId === message.author">
+                    
+                       <img ng-click="viewProfile(message)" 
+                            class="profile-pic right"
+                            ng-src="{{touserPic}}"/>
+                    
+                      <div class="chat-bubble right">
+      
+                          <div class="message" ng-bind-html="message.text">
+                          </div>
+      
+                          <div class="message-detail">
+                              <span ng-click="viewProfile(message)">{{message.author}}</span>, 
+                              <span am-time-ago="message.date"></span>
+                          </div>
+      
+                      </div>
+                    
+                  </div>
+      
+                  <div class="cf"></div>
+      
+              </div>
+          </ion-content>
+      
+          <form name="sendMessageForm" ng-submit="sendMessage()" novalidate>
+              <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+                  <label class="item-input-wrapper" id="chat-input">
+                      <textarea ng-model="newMsg" 
+                                ng-enter="sendMessage()"
+                                value="" placeholder="吐露你的心声..." 
+                                required minlength="1" maxlength="1500" 
+                                msd-elastic>
+                      </textarea>
+                  </label>
+                  <div class="footer-btn-wrap">
+                    <button class="button button-icon icon ion-android-send footer-btn" type="submit"
+                        ng-disabled="(!newMsg || newMsg === '') || disableInput">
+                    </button>
+                  </div>
+              </ion-footer-bar>
+          </form>
+          
+      </ion-view>

@@ -1,0 +1,22 @@
+<ion-view view-title="我的课程">
+	<ion-content class="scroll-bg-1">
+
+        <div class="list">
+            <a class="item item-avatar item-icon-right"
+                ng-repeat="course in courses"
+			    ng-click="gotoProfReview(course)">
+                <span class="conditional-images">
+                    <img src='{{course.deptImg}}'>
+                </span>
+
+                <h2>{{course.prof}}</h2>
+                <p>{{course.name}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+        </div>
+
+		<ion-infinite-scroll on-infinite="loadMore()" distance="1%"  ng-if="!noOldPosts" class="ispinner" spinner="ripple">
+		</ion-infinite-scroll>
+
+	</ion-content>
+</ion-view>

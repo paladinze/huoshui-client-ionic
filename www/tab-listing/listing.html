@@ -1,0 +1,154 @@
+<ion-view view-title="活水" hide-nav-bar="true">
+
+
+	<ion-header-bar class="bar bar-header item-input-inset">
+        <span ng-click="cancelSearch()">
+          <p style="font-size:20px; font-weight: bold;margin: 0px 15px 0px 9px" >活水</p>
+        </span>
+
+	  <label class="item-input-wrapper">
+		<i class="icon ion-ios-search placeholder-icon"></i>
+		<input type="search"
+			   placeholder="教师姓名，课程或任何关联词"
+               style="color: white"
+			   ng-model="searchText.text"
+			   ng-change="startSearch()">
+	  </label>
+
+	</ion-header-bar>
+
+
+  <ion-content scroll="true" class="scroll-bg-1" has-bouncing="false" on-scroll="getScrollPosition()">
+
+	  	<div ng-if="showPromoContent">
+            <div class="item showcase-head">
+                <div class="button-tabbed">
+									<a class="button"
+										 style="margin-right:5px"
+										 ng-class="{'button-energized': isActive('newPost'),'button-balanced': !isActive('newPost')}"
+										 ng-click="setFetchOption('newPost')">最新评价</a>
+                  <a class="button"
+                       style="margin-left:5px"
+                       ng-class="{'button-energized': isActive('goodPost'),'button-balanced': !isActive('goodPost') }"
+                       ng-click="setFetchOption('goodPost')">热门评价</a>
+                </div>
+            </div>
+
+            <div class="card card-review-showcase "
+                 ng-if="active === 'goodPost'"
+                 ng-click="gotoProfReview(review)"
+                 ng-repeat="review in goodPost">
+                <div class="item showcase-meta">
+                    <div class="item-avatar">
+                        <img src="{{review.deptImg}}">
+                        <h2>
+                            评<span class="text-positive">{{review.profName}}</span>的
+                            <span class="text-positive">{{review.courseName}}</span>
+                        </h2>
+                        <p>{{review.authorName}}&nbsp;
+                            {{review.rating.overall/3 | number: 1}}分
+                            <span class="date" style="float:right" am-time-ago="review.createdTime"></span>
+                        </p>
+                        <div ng-show="active=='deptRank' && showDept == true">
+                            <span  class="rank-filter-label"><p>{{deptOption}}</p></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-text-wrap showcase-content">
+                    <p>{{review.comment}}<br></p>
+                </div>
+            </div>
+
+            <div class="card card-review-showcase "
+                 ng-if="active === 'newPost'"
+                 ng-click="gotoProfReview(review)"
+                 ng-repeat="review in newPost">
+                <div class="item showcase-meta">
+                    <div class="item-avatar">
+                        <img src="{{review.deptImg}}">
+                        <h2>
+                            评<span class="text-positive">{{review.profName}}</span>的
+                            <span class="text-positive">{{review.courseName}}</span>
+                        </h2>
+                        <p>{{review.authorName}}&nbsp;
+                            {{review.rating.overall/3 | number: 1}}分
+                            <span class="date" style="float:right" am-time-ago="review.createdTime"></span>
+                        </p>
+                        <div ng-show="active=='deptRank' && showDept == true">
+                            <span  class="rank-filter-label"><p>{{deptOption}}</p></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-text-wrap showcase-content">
+                    <p>{{review.comment}}<br></p>
+                </div>
+            </div>
+
+		</div>
+
+
+        <div class="list" ng-if="!showPromoContent">
+            <a class="item item-avatar item-icon-right"
+                ng-repeat="course in displayCourses track by $index"
+                ui-sref="tab.listing-detail({ listingId: course.prof, deptId: course.dept })">
+                <span class="conditional-images">
+                    <img src="{{course.deptImg}}">
+                </span>
+
+                <h2>{{course.prof}}</h2>
+                <p>{{course.name}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+
+            <div class="user-add-course-prompt"  ng-if="showUserAddCoursePrompt">
+                <p>没找到目标？换个关键字试试呢。（如果还是没找到，你可以选择主动添加该课程）</p>
+                <button class="button button-positive"
+                        ng-click="showUserAddCourseForm();"
+                        >
+                  添加课程
+                </button>
+            </div>
+
+
+
+            <ion-infinite-scroll on-infinite="loadMore()" distance="1%"
+                                 ng-if="!noMorePost && !showPromoContent" class="ispinner" spinner="ripple">
+            </ion-infinite-scroll>
+        </div>
+
+
+
+
+
+
+        <ion-infinite-scroll on-infinite="fetechMoreGoodPost()" distance="1%"
+                             ng-if="!fetchStatus.noMoreGoodPost && active === 'goodPost' && showPromoContent"
+                             class="ispinner" spinner="ripple">
+        </ion-infinite-scroll>
+
+        <ion-infinite-scroll on-infinite="fetechMoreNewPost()" distance="1%"
+                             ng-if="!fetchStatus.noMoreNewPost && active === 'newPost' && showPromoContent"
+                             class="ispinner" spinner="ripple">
+        </ion-infinite-scroll>
+
+  </ion-content>
+    <div class="float-button" ng-if="showPromoContent && active === 'newPost'"
+    		 ng-show="refreshButton" ng-click="refreshNewPost()">
+     <span class="height-fix">
+    		<a class="content">
+    			<i class="ion-android-sync"> </i>
+    		</a>
+    	 </span>
+    </div>
+
+
+    <div class="float-button" ng-if="showPromoContent"
+         ng-show="sttButton" ng-click="scrollToTop()">
+     <span class="height-fix">
+        <a class="content">
+          <i class="ion-ios-arrow-up"> </i>
+        </a>
+       </span>
+    </div>
+
+</ion-view>

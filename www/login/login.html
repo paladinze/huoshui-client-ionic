@@ -1,0 +1,62 @@
+<ion-view hide-nav-bar="true" >
+	<ion-content  class="scroll-bg-1" has-bouncing="false">
+	
+
+		<div class="container-tagline">
+            <ks-swiper-container  override-parameters="{'autoplay':'5000',
+                                                       'effect':'slide',
+                                                       'paginationHide':'true',
+                                                       'paginationClickable': 'false',
+                                                       }"
+                                 initial-slide="0" 
+                                 loop="true" 
+                                 show-nav-buttons="false" 
+                                 slides-per-view="1" 
+                                 space-between="0" 
+                                 pagination-clickable="false"  
+                                 on-ready="onReadySwiper(swiper)">
+                <ks-swiper-slide class="swiper-slide s1" ng-repeat="headline in headlines" ng-click="alert()">
+                    <div id="login-tagline" class="text-tagline animated  fadeIn ">
+                        <div class="comment-to">
+                            <p>评 {{headline.to}}:</p>
+                        </div>
+                        <div class="comment-detail">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                “{{headline.content}}”</p>
+                        </div>
+                        <div class="comment-from">
+                            <p>--- {{headline.from}}</p>
+                        </div>
+                    </div>
+                </ks-swiper-slide>						
+
+            </ks-swiper-container>    		        
+		</div>   
+        
+
+
+		<div class="container-login-form">
+            <div>
+                <form class="padding login-form" name="loginForm">
+                    <label class="">
+                        <input type="email" placeholder="邮箱" ng-model="user.email" name="email" required style="margin-bottom:10px">
+                    </label>
+
+                    <label class="">
+                        <input type="password" placeholder="密码" ng-model="user.password" name="password" required>
+                    </label>
+                </form>     
+
+                <button ng-click="login()" 
+                        class="button button-block button-positive button-login">
+                    登录
+                </button>
+                <p style="margin:auto;text-align:center;font-size:14px">
+                    <span ng-click="guestLogin()">游客登录</span> ｜ <span ng-click="gotoSignup()">快捷注册</span>
+                </p>
+            </div>
+		</div>
+		
+
+	</ion-content>
+</ion-view>

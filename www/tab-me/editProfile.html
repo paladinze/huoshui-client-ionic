@@ -1,0 +1,28 @@
+<div class="list">
+  <label class="item item-input">
+    <input type="text" 
+           ng-model="user.username"
+           minlength="2" maxlength="12" placeholder="昵称">
+  </label>
+    
+    <label class="item item-input item-select">
+        <div class="input-label">
+          <p>年级：</p>
+        </div>
+        <select name="yearSelect"
+                id="yearSelect" 
+                ng-model="yearInfo.selectedOption"
+                ng-options="option.name for option in yearInfo.allOptions track by option.id">
+        </select>
+    </label>
+    <label class="item item-input item-select">
+        <div class="input-label">
+          <p>学院：</p>
+        </div>
+        <select name="deptSelect"
+                id="deptSelect" 
+                ng-model="deptInfo.selectedOption"
+                ng-options="option.name for option in deptInfo.allOptions track by option.id">
+        </select>
+    </label>
+</div>

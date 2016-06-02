@@ -1,0 +1,20 @@
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        
+      <h1 class="title">选择入学年份</h1>
+      <button class="button button-clear button-primary" ng-click="modalYearComplete()">完成</button>
+    </ion-header-bar>
+      
+    <ion-content class="">
+        
+        <ion-checkbox ng-repeat="year in yearOptions track by year.id"
+                      ng-model="year.checked" 
+                      ng-checked="year.checked"
+                      ng-change="yearCheckChanged(year)" 
+                      ng-disabled="yearChecked==yearLimit && !year.checked">
+          {{ year.name }}
+        </ion-checkbox>         
+        
+        
+    </ion-content>
+  </ion-modal-view>

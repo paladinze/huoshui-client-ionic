@@ -1,0 +1,96 @@
+<ion-view hide-nav-bar="true" title="注册">
+	<ion-content has-header="false" class="scroll-bg-2" scroll="true" has-bouncing="false">
+		
+
+		<div class="container-content">
+
+			<div class="signup-tagline">
+				<p style="">除了<b>自由</b>和<b>真实</b>，</p>
+				<p style="float:right">我们不需要更多。</p>
+			
+			
+			</div>
+			
+			
+			
+			
+			<form class="signup-form" name="signUp">
+				<div class="input-and-error">
+					<label class="">
+						<input type="text" placeholder="昵称" ng-model="user.username" name="username" id="username" required  ng-minlength="2" maxlength="12">
+					</label>
+					<div class="signup-error">
+						<span ng-show="!signUp.username.$error.required && signUp.username.$dirty
+									   && signUp.username.$error.minlength">
+							昵称需在2至12个字以内</span>
+					</div>
+				</div>
+				
+				<div class="input-and-error">
+					<label class="">
+						<input type="email" placeholder="电子邮箱" ng-model="user.email" name="email" id="email" 
+							   ng-pattern="/.{1,}@[_a-z0-9A-Z]+(\.[a-z0-9A-Z]+)+/" required>
+					</label>
+					<div class="signup-error">
+						<span ng-show="!signUp.email.$error.required && signUp.email.$dirty
+									   && (signUp.email.$error.email ||  signUp.email.$error.pattern)">
+							电子邮箱格式不正确</span>
+					</div>
+				</div>
+					
+				<div class="input-and-error">
+					<label class="">
+						<input type="password" placeholder="密码" equals={{user.password_c}}
+							   ng-model="user.password" name="password" id="password" required ng-minlength="6" maxlength="12" >
+					</label>
+					<div class="signup-error">
+						<span ng-show="!signUp.password.$error.required && signUp.password.$dirty 
+									   && signUp.password.$error.minlength">
+							密码需在6至12个字以内</span>
+					</div>
+				</div>
+					
+				<div class="input-and-error">
+					<label class="">
+						<input type="password" placeholder="确认密码" equals={{user.password}}
+							   ng-model="user.password_c" name="password_c"  id="password_c" required>
+					</label>
+					<div class="signup-error">
+						<span ng-show="!signUp.password.$error.required && !signUp.password_c.$error.required 
+									   && signUp.password.$dirty
+									   && signUp.password_c.$error.equals">
+							密码不匹配</span>
+					</div>          
+				</div>
+
+			</form>
+			
+			
+			<div class="select-groups">
+				<div class="select-group">
+					<div class="select-label">年级</div><div class="select-value" ng-click="modal_year.show()">
+						{{user.year || '请选择'}}
+					</div>
+				</div>
+
+				<div class="select-group" >
+					<div class="select-label">学院</div><div class="select-value" ng-click="modal_dept.show()">
+						{{user.dept || '请选择'}}
+					</div>
+				</div>
+			</div>
+			<button ng-click="signup()" 
+					ng-disabled="!signUp.$valid || user.year == '' || user.dept == ''  "
+					class="button button-signup button-block button-positive" style="    background-color: #A23128;">
+					<b>注册</b>
+			</button>
+			<br>
+			<p style="margin:auto;text-align:center;font-size:14px">
+				<span ng-click="gotoLogin()">回到登录</span>
+			</p>
+		</div>
+
+		
+		
+	</ion-content>
+</ion-view>

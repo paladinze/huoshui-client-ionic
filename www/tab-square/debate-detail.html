@@ -1,0 +1,63 @@
+<ion-view title="具体讨论">
+    
+  <ion-nav-buttons side="right">
+    <button class="button button-clear" ng-click="modal_vote.show()">投票</button>
+  </ion-nav-buttons>      
+    
+    <ion-content class="scroll-bg-1">
+    
+        <div class="card card-debate" ng-click="gotoDebateDetail()">
+            <div class="item heading " >
+                <h2 style="">健身卡刷还是不刷？<span style="float:right">40%赞成</span></h2> 
+                <p ><span style="float:right">100人参与</span></p>
+                <div class="item-text-wrap">
+                    <p style="margin-bottom:5px">正方：有效督促学生锻炼身体，此处要写完</p>
+                    <p>反方：太过强制，有损学生自主性，不能。一个意思，回家福建看看，集度假大家记得，乱打的</p><br>
+                </div>
+                
+                <div class="row" ng-click="modal_post.show()">          
+                    <div class="col-10" style="margin-right:5px;text-align:center;color: rgba(91,192,222,1)">
+                        <i class="fa fa-sun-o fa-2x"></i>                  
+                    </div>            
+                    <div class="col-80">          
+                        <div class="container bootstrap">
+                            <div class="progress" style="margin-top:5px;margin-bottom:5px;">
+                                <div class="progress-bar progress-bar-info" role="progressbar" style="width:40%">
+                                    正方（40%）
+                                </div>
+                                <div class="progress-bar progress-bar-danger" role="progressbar" style="width:60%">
+                                    反方（60%）
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>     
+                    <div class="col-10" style="margin-left:5px;text-align:center;color: rgba(217,83,79,1)">
+                        <i class="fa fa-moon-o fa-2x"></i>                  
+                    </div>         
+                </div>      
+                
+            </div>
+            <div class="item item-text-wrap opinion" >
+                <p class="meta">正方辩手：机械－12级 <span style="float:right; color: grey">3天前</span></p>
+                <div class="item-text-wrap">
+                    <P>巴拉拉的理由，吸引大家打开这个卡片就好了发射架飞机及阿拉斯加分减肥睡觉了飞机福建爱上开了房间发生就离开福建爱上房间爱上了飞机撒飞阿什利款到即发，牛逼的理由</P>
+                </div>
+                <div class="dig">
+                    赞（10） 踩（2）
+                </div>
+            </div>
+            
+            <div class="item item-text-wrap opinion" >
+                <p class="meta">反方辩手：机械－12级 <span style="float:right; color: grey">3天前</span></p>
+                <div class="item-text-wrap">
+                    <P>巴拉拉的理由，吸引大家打开这个卡片就好了发射架飞机及阿拉斯加分减肥睡觉了飞机福建爱上开了房间发生就离开福建爱上房间爱上了飞机撒飞阿什利款到即发，牛逼的理由</P>
+                </div>
+                <div class="dig">
+                    赞（10） 踩（2）
+                </div>
+            </div>            
+            
+        </div>
+    
+    </ion-content>
+</ion-view>

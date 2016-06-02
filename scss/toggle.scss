@@ -1,0 +1,45 @@
+.toggle-text > .track {
+
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.toggle-text .handle {
+  left: 5px;
+}
+
+.toggle-text .handle-text {
+  font-size: 14px;
+  color: white;
+
+  position: absolute;
+  top: 4px;
+  
+}
+
+.toggle-text .handle-text-false {
+  left: 36px;
+}
+
+.toggle input + .track{
+  background-color: darkgrey;
+}
+
+.toggle-text input:checked + .track .handle {
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+  left: calc(100% - 50px);
+  
+/*  -webkit-transform: translate3d(0, 0,0);*/
+}
+.track-text {
+  line-height: 26px;
+  color: white;
+  font-size: 24px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+

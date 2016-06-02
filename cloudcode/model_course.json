@@ -1,0 +1,32 @@
+{
+  "tags": [0, 0, 2, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "prof": "陈思本",
+  "rate1": 5,
+  "rate3": 5,
+  "rateOverall": 5,
+  "ACL": {
+    "*": {
+      "read": true,
+      "write": true
+    }
+  },
+  "reviewGoodCount": 2,
+  "school": "西南交通大学",
+  "attendanceCount": 2,
+  "attendanceOverall": 2.5,
+  "name": "英语Ⅱ",
+  "reviewCount": 2,
+  "homeworkCount": 2,
+  "homeworkOverall": 3,
+  "rate2": 5,
+  "position": "副教授",
+  "examCount": 2,
+  "campus": "犀浦",
+  "birdOverall": 1.5,
+  "dept": "外语",
+  "birdCount": 2,
+  "examOverall": 2,
+  "objectId": "561da591e4b0d98abf280fc8",
+  "createdAt": "2015-10-14T00:45:05.741Z",
+  "updatedAt": "2016-03-02T12:49:10.887Z"
+}

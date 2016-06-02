@@ -1,0 +1,49 @@
+<ion-view view-title="我的评论">
+	<ion-content class="scroll-bg-1">
+
+
+        <div ng-repeat="review in allReviews">
+            <div class="card card-review" ng-click="gotoProfReview(review)">
+				<div class="heading">
+					<div class="row">
+						<div class="col-20">
+                            <span ng-switch on="review.grade">
+                               <img ng-switch-when="0" src='img/bad.png' width="80%">
+                               <img ng-switch-when="1" src='img/okay.png' width="80%">
+                               <img ng-switch-when="2" src='img/good.png' width="80%">
+                               <img ng-switch-default   src='img/bad.png' width="80%">
+                            </span>
+						</div>
+						<div class="col-80">
+							<p>{{review.courseName}}<span style="float:right">{{review.rating.rate1}} / {{review.rating.rate3}} / {{review.rating.rate3}}分</span></p>
+							<p>{{review.profName}}<span class="date" style="float:right" am-time-ago="review.createdTime"></span></p>
+
+						</div>
+					</div>
+				</div>
+				<div class="body">
+					<div class="">
+						<p> {{review.comment}}</p>
+					</div>
+					<div class="tags">
+						<p style="margin:0px;" ng-if="review.showTags"> 标签：
+							<span ng-repeat="tag in review.tags">{{tag.value}}{{$last ? '' : ', '}}</span>
+						</p>
+					</div>
+					<div class="dig" style="float:right">
+						  <p class="">
+							  <span>
+								  <i class="fa fa-thumbs-o-up fa"></i>&nbsp;{{review.upVote}}&nbsp;</span>&nbsp;&nbsp;
+							  <span>
+								  <i class="fa fa-thumbs-o-down fa"></i>&nbsp;{{review.downVote}}&nbsp;</span>
+						  </p>
+					</div>
+				</div>
+            </div>
+        </div>
+
+		<ion-infinite-scroll on-infinite="loadMore()" distance="1%"  ng-if="!noOldPosts" class="ispinner" spinner="ripple">
+		</ion-infinite-scroll>
+
+	</ion-content>
+</ion-view>

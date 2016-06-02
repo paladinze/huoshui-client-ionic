@@ -1,0 +1,4 @@
+.crazyItem{
+    -webkit-animation: fadeInLeft 1s;
+    animation: fadeInLeft 1s;
+}

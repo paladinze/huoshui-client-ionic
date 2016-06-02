@@ -1,0 +1,58 @@
+button.button.button-clear.button-highlight{
+	
+	background-color: #C72F25;
+	border: 1px solid white;
+
+	
+}
+
+.button.button-light.button-clear {
+    color: #FFF !important;
+}
+
+.button.button-stable.button-clear {
+    color: #FFF !important;
+    opacity: 0.3;
+}
+
+
+
+
+
+.bar .button-bar-sort .button.button-clear {
+    //font-weight: bold !important;
+}
+
+
+
+.float-button {
+ 
+    background-color: $positive;
+    opacity: 0.9;
+    color: white;
+    border-radius: 50%;
+    /*border-radius:15% 0 0 0;*/
+    width: 15px;
+    padding: 20px;
+    font-size: 40px;
+    position: fixed;
+    bottom: 12%; /* Adjust height */
+    right: 5%; /* Adjust position */
+    z-index: 1000;
+}
+ 
+.float-button .height_fix {
+    margin-top: 100%;
+    border: 1px solid red;
+}
+ 
+.float-button .content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -20px;
+    color: white;
+}

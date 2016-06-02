@@ -1,0 +1,187 @@
+
+/*-----------------------------------------------------
+* tagline (browser version)
+------------------------------------------------------*/
+
+.container-tagline {
+    height: 300px;
+    background-color: $login-background;
+    position: relative;
+    padding: 25px 0px 25px 0px;
+}
+
+.container-tagline .text-tagline {
+	width: 255px;
+	color: white;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.container-tagline .text-tagline .comment-to p {
+	font-size: 16px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.container-tagline .text-tagline .comment-detail p {
+	font-size: 22px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.container-tagline .text-tagline .comment-from p {
+	font-size: 16px;
+	float: right;
+	font-weight: bold;
+}
+
+
+
+.container-login-form{
+    min-height: 220px;
+}
+
+
+form.login-form {
+	padding-top: 20px;
+	padding-bottom: 15px;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+button.button.button-block.button-login {
+	width:235px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 10px;
+
+	min-height: 20px;
+	height: 35px;
+	line-height: 30px;	
+	
+}
+
+
+.login-form input {
+    margin:auto;
+    width:235px;
+    border-radius:0px;
+    text-indent:10px;
+}
+
+
+.login-form input::-webkit-input-placeholder {
+  padding-left:15px !important;
+}
+.login-form input:-moz-placeholder {
+  padding-left:15px !important;
+}
+.login-form input:-ms-input-placeholder {
+  padding-left:15px !important;
+}
+
+
+
+
+
+
+/*-----------------------------------------------------
+* tagline (working, but flex not working in UC browser)
+
+
+.container-tagline {
+    height: 350px;
+    background-color: $login-background;
+    position: relative;
+    padding: 50px 0px 25px 0px;
+}
+
+.container-tagline .text-tagline {
+	width: 255px;
+	color: white;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.container-tagline .text-tagline .comment-to p {
+	font-size: 16px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.container-tagline .text-tagline .comment-detail p {
+	font-size: 22px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.container-tagline .text-tagline .comment-from p {
+	font-size: 16px;
+	float: right;
+	font-weight: bold;
+}
+
+
+
+.container-login-form{
+    min-height: 220px;
+}
+
+
+form.login-form {
+	padding-top: 20px;
+	padding-bottom: 15px;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+button.button.button-block.button-login {
+	width:235px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 10px;
+
+	min-height: 20px;
+	height: 35px;
+	line-height: 30px;	
+	
+}
+
+
+.login-form input {
+    margin:auto;
+    width:235px;
+    border-radius:0px;
+    text-indent:10px;
+}
+
+
+.login-form input::-webkit-input-placeholder {
+  padding-left:15px !important;
+}
+.login-form input:-moz-placeholder {
+  padding-left:15px !important;
+}
+.login-form input:-ms-input-placeholder {
+  padding-left:15px !important;
+}
+
+------------------------------------------------------*/

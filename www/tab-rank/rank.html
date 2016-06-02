@@ -1,0 +1,62 @@
+
+
+
+<ion-view view-title="榜单">
+
+<!--
+  <ion-nav-buttons side="right">
+    <button class="button button-clear" ng-click=""><i class=" icon ion-android-add"></i></button>
+  </ion-nav-buttons>
+    -->
+  <ion-content has-bouncing="false">
+
+      <!--
+    <ion-refresher pulling-text="刷新请下拉..." on-refresh="doRefresh()" spinner="ios">
+    </ion-refresher>
+		-->
+
+	 <div class="item rank-head">
+
+            <div class="button-bar" >
+                <a class="button"
+                   ng-class="{'button-positive': isActive('deptRank')}"
+                    style="border-width: 0px;border-radius: 0px;"
+                   ng-click="setFilterOption('schoolRank')">全校总览</a>
+                <a class="button"
+                   ng-class="{'button-positive': isActive('schoolRank')}"
+                    style="border-width: 0px;border-radius: 0px;"
+                   ng-click="setFilterOption('deptRank')">筛选院系</a>
+            </div>
+	 </div>
+
+
+	<div class="list">
+
+		<div class="item item-avatar"
+		ng-click="gotoRankDetail(rank.id)"
+		ng-repeat="rank in rankList">
+            <div class="item-avatar-content" style="padding: 5px 5px 5px 0px">
+                <img src="{{rank.img}}"
+								style="    position: absolute;
+							    left: 16px;
+							    max-width: 40px;
+							    max-height: 40px;
+							    width: 100%;
+							    height: 100%;
+							    border-radius: 50%;">
+                <h2>{{rank.title}}</h2>
+                <p>{{rank.tagline}}</p>
+                <div ng-show="active=='deptRank' && showDept == true">
+                    <span  class="rank-filter-label"><p>{{deptOption}}</p></span>
+                </div>
+            </div>
+		</div>
+
+	</div>
+
+	<!--
+    <ion-infinite-scroll on-infinite="loadMore()" distance="1%"  ng-if="!noOldPosts" spinner="ripple">
+    </ion-infinite-scroll>
+-->
+  </ion-content>
+</ion-view>

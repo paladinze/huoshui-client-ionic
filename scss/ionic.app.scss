@@ -1,0 +1,317 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+$fa-font-path:  "../lib/font-awesome/fonts" !default;
+
+/*-----------------------------------------------------
+* Font Setting
+------------------------------------------------------*/
+$font-size-base:                  14px !default;
+$item-font-size:                  16px !default;
+
+
+
+/*-----------------------------------------------------
+* Content Color
+------------------------------------------------------*/
+$positive:                      #E54D42  !default;  //rgba(234,103,110,1) !default;//#E54D42  !default;   
+$positive-transparent:              rgba(229, 77, 66, 0.15);
+
+//$light:                          rgba(241,241,241,1) !default; //caution, may be harmful
+//$calm:                            #D4D4D4 !default; //caution, may be harmful
+
+$balanced:                      rgba(217,217,217,1) !default;
+$energized:                     rgba(255,255,255,1) !default;
+
+$login-background:              #D0554C;
+
+
+
+/*-----------------------------------------------------
+* Background Color
+------------------------------------------------------*/
+.scroll-bg-1 {
+  //background: url('../img/pattern_pink.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #FFF0F0;//rgba(253,247,247,1);#FFF0F0;
+}
+
+
+.scroll-bg-2 {
+  //background: url('../img/pattern_pink.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: $login-background;//rgba(80,108,163,1);//rgba(253,247,247,1);
+}
+
+/*-----------------------------------------------------
+* text Color
+------------------------------------------------------*/
+.text-positive {
+    color: $positive;
+}
+
+.text-grey {
+    color: grey;
+}
+
+
+.card {
+	background-color: rgba(255,255,255,0.5) !important;
+}
+
+ion-header-bar.bar.bar-subheader.item-input-inset.bar-header {
+    background-color: $positive !important;
+	border-top: 1px solid white;   
+	color: white;
+}
+ion-header-bar.bar.bar-subheader label.item-input-wrapper {
+    background-color: rgba(193, 31, 19, 0.75);
+}
+
+ion-header-bar.bar.bar-header.item-input-inset.bar-header {
+    background-color: $positive !important;
+	//border-top: 1px solid white;   
+	color: white;
+}
+ion-header-bar.bar.bar-header label.item-input-wrapper {
+    background-color: rgba(193, 31, 19, 0.75);
+}
+
+
+
+.ion-ios-search input{
+	color: white;
+} 
+
+
+.text-limit-lines {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   //line-height: 16px;     /* fallback */
+   //max-height: 48px;      /* fallback */
+   -webkit-line-clamp: 3; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+
+
+
+/*-----------------------------------------------------
+* Global Stting
+------------------------------------------------------*/
+
+//disable all shadow
+
+//* {
+//    box-shadow: none !important;
+//}
+
+//modify box shadow
+//$card-box-shadow:   0 4px 3px rgba(0, 0, 0, 0.3);
+
+/*-----------------------------------------------------
+* UI bootstrap fix
+------------------------------------------------------*/
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+
+/*-----------------------------------------------------
+* swiper customization
+------------------------------------------------------*/
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: $positive;
+}
+
+/*-----------------------------------------------------
+* Others
+------------------------------------------------------*/
+//modify clear button color
+button.col.button-clear {
+    color: #fff;
+}
+
+
+#login-tagline {
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+}
+
+#showcase1 {
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+}
+
+#showcase2 {
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 3s;
+}
+
+
+//modify listing icons
+.conditional-images img  {
+	position: absolute;
+    top: 16px;
+    left: 16px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+//webview
+
+#secret div.scroll{
+    height: 100%; 
+}
+
+.webpage {
+    width: 100%;
+    height: 100%;
+    border: 0px solid #EAAB00;
+    padding: 0rem;  
+}
+
+.radio-icon {
+  color: $positive;
+}
+
+
+.img-banner {
+    
+  width: 100%;
+  padding-bottom: 30%;
+    background-size:   cover;                      
+    background-repeat: no-repeat;
+    //background-position: center center;   
+    
+}
+
+.img-banner p{
+
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  margin: 0;    
+    
+}
+
+.img-banner h2{
+
+  position: relative;
+  top: 20px;
+  left: 20px;
+  color: white;
+  margin: 0;    
+    
+}
+
+.keyboard-open .tabs{
+  display:none;
+  }
+.keyboard-open .has-tabs{
+ bottom:0;
+ }
+
+
+
+
+//Import Login & signup scss
+@import 'scss/login';
+@import 'scss/signup';
+
+//Import Search scss
+@import 'scss/search-subheader';
+
+//Import Chat scss
+@import 'scss/chat';
+
+//Import profile scss
+@import 'scss/profile';
+
+//Import custom card scss
+@import 'scss/custom-card';
+
+//Import custom item scss
+@import 'scss/custom-item';
+
+//Import custom item scss
+@import 'scss/custom-button';
+
+//Import spinner scss
+@import 'scss/nvd3';
+
+//Import spinner scss
+@import 'scss/spinner';
+
+//Import toggle scss
+@import 'scss/toggle';
+
+//Import tag scss
+@import 'scss/tags';
+
+//Import range slider scss
+@import 'scss/range-slider';
+
+//Import range slider scss
+@import 'scss/chart';
+
+//Import rating scss
+@import 'scss/rating';
+
+//Import rating scss
+@import 'scss/search-prompt';
+
+//Import font awesome
+@import "www/lib/font-awesome/scss/font-awesome";  
+
+//Import Bootstrap SASS
+.bootstrap {
+    @import "www/lib/bootstrap-sass/assets/stylesheets/bootstrap";
+}
+//
+
+
+// Include all of Ionic (Important: must load last)
+@import "www/lib/ionic/scss/ionic";
+
+// Inlude filter bar 
+@import  "www/lib/ionic-filter-bar/scss/ionic.filter.bar";
+
+
+/*
+
+.toggle input:checked + .track .handle {
+    -webkit-transform: translate3d(17px, 0, 0);
+    transform: translate3d(17px, 0, 0);
+    background-color: #fff;
+}*/
+
+  @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .bar {
+      border: none;
+      background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
+      background-position: bottom;
+      background-size: 100% 0px;
+      background-repeat: no-repeat; } }

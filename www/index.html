@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="description" content="活水，中国最真实的评课情报。这是一个让学生自由发声的平台，它集中了大学生们对于当下高校教育的真实想法。你可以抒发对老师、课程的真实感想，说出自己的经历和心声，所有人都会关注你的话。你还可以参考同学们留下的心得体会，让自己能够成竹在胸。所有发言匿名。信任优于管制，我们相信平台自身能够保持活力与健康，而不会成为一潭污浊的死水。改变来源于积累，你的点滴声音大家都在乎。">
+    <meta name="keywords" content="活水,评课,评师,西南交通大学">
+    <meta name="author" content="活水">
+
+    <meta name="theme-color" content="#E54D42">
+    <meta name="msapplication-navbutton-color" content="#E54D42">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#E54D42">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>活水</title>
+
+    <link href="lib/ionic-rating/ionic-rating.css" rel="stylesheet">
+    <link href="lib/angular-chart.js/dist/angular-chart.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/nvd3/build/nv.d3.min.css">
+    <link href="lib/swiper/dist/css/swiper.min.css" rel="stylesheet">
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/radio.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="loading-indicators/inner-circle.css" type="text/css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-75590488-3', 'auto');
+    </script>
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+
+    <script src="lib/ngstorage/ngStorage.min.js"></script>
+    <script src="lib/angular-filter/dist/angular-filter.min.js"></script>
+    <script src="js/av-mini-0.6.1.js"></script>
+
+    <!-- animation: carousal-->
+    <script src="lib/swiper/dist/js/swiper.min.js"></script>
+    <script src="lib/angular-swiper/dist/angular-swiper.js"></script>
+
+
+    <!-- Util: chartjs charts -->
+    <script src="lib/Chart.js/Chart.min.js"></script>
+    <script src="lib/angular-chart.js/dist/angular-chart.min.js"></script>
+
+    <!-- Util: d3 charts -->
+    <script src="lib/d3/d3.min.js"></script>
+    <script src="lib/nvd3/build/nv.d3.min.js"></script>
+    <script src="lib/angular-nvd3/dist/angular-nvd3.min.js"></script>
+
+    <!-- Util: star -->
+    <script src="lib/ionic-rating/ionic-rating.js"></script>
+
+    <!-- ios9 radio button patch -->
+    <script src="js/ionRadio.js"></script>
+
+    <!-- time formatting -->
+    <script src="lib/moment/min/moment.min.js"></script>
+    <script src="lib/angular-moment/angular-moment.min.js"></script>
+    <script src="lib/moment/locale/zh-cn.js"></script>
+
+    <!--Ionic filter bar -->
+    <link href="lib/ionic-filter-bar/dist/ionic.filter.bar.css" rel="stylesheet">
+    <script src="lib/ionic-filter-bar/dist/ionic.filter.bar.js"></script>
+
+    <!-- custom common js -->
+    <script src="js/app.js"></script>
+    <script src="login/login.js"></script>
+    <script src="signup/signup.js"></script>
+
+    <script src="tabs/tabs.js"></script>
+    <script src="tab-square/square.js"></script>
+
+    <script src="tab-listing/listing.js"></script>
+
+    <script src="tab-discover/discover.js"></script>
+
+    <script src="tab-rank/rank.js"></script>
+
+    <script src="tab-review/review.js"></script>
+
+    <script src="tab-me/script/me.js"></script>
+    <script src="tab-me/script/me-main.js"></script>
+    <script src="tab-me/script/me-setting.js"></script>
+    <script src="tab-me/script/me-chat.js"></script>
+
+    <script src="js/controllers.js"></script>
+
+    <script src="service/service.js"></script>
+    <script src="service/courseService.js"></script>
+    <script src="service/reviewService.js"></script>
+    <script src="service/deptService.js"></script>
+    <script src="service/chatService.js"></script>
+    <script src="service/popupService.js"></script>
+    <script src="service/positionService.js"></script>
+
+    <script src="js/directive.js"></script>
+
+    <script src="lib/angulartics/dist/angulartics.min.js"></script>
+    <script src="lib/angulartics-google-analytics/dist/angulartics-google-analytics.min.js"></script>
+
+  </head>
+  <body ng-app="starter">
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view animation="no-animation"></ion-nav-view>
+
+  </body>
+</html>

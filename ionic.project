@@ -1,0 +1,12 @@
+{
+  "name": "courseReview",
+  "app_id": "bf5280b7",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

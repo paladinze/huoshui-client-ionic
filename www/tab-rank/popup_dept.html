@@ -1,0 +1,7 @@
+        <ion-checkbox ng-repeat="dept in deptOptions track by dept.id"
+                      ng-model="dept.checked" 
+                      ng-checked="dept.checked"
+                      ng-change="deptCheckChanged(dept)" 
+                     >
+          {{ dept.value }}
+        </ion-checkbox>  

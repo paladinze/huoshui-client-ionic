@@ -1,0 +1,22 @@
+div.page-loading-spinner {
+  margin: auto;
+  position: absolute;
+  top: 250px; left: 0; bottom: 0; right: 0;
+  height: 85px;
+  text-align: center;
+}
+.page-loading-spinner svg {
+  width: 19% !important;
+  height: 85px !important;
+}
+
+
+.ispinner .spinner {
+    stroke: $positive;
+    fill: $positive;
+}
+
+.ispinner .spinner svg {
+    width: 35px !important;
+    height: 35px !important;
+}

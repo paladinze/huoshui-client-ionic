@@ -1,0 +1,83 @@
+{
+  "tags": [{
+    "positive": true,
+    "id": "2",
+    "value": "引人入胜"
+  }, {
+    "positive": true,
+    "id": "6",
+    "value": "治学严谨"
+  }],
+  "attendance": {
+    "id": "4",
+    "value": 4,
+    "name": "多"
+  },
+  "bird": {
+    "id": "1",
+    "value": 1,
+    "name": "绝非水课"
+  },
+  "authorId": {
+    "__type": "Pointer",
+    "className": "_User",
+    "objectId": "56d6e1461532bc004c797060"
+  },
+  "downVote": 0,
+  "ACL": {
+    "*": {
+      "read": true,
+      "write": true
+    }
+  },
+  "upVote": 0,
+  "profName": "陈思本",
+  "exam": {
+    "examprep": {
+      "checked": true,
+      "id": "0",
+      "name": "划重点",
+      "touched": true
+    },
+    "openbook": {
+      "checked": false,
+      "id": "1",
+      "name": "开卷",
+      "touched": true
+    },
+    "oldquestion": {
+      "checked": false,
+      "id": "2",
+      "name": "原题",
+      "touched": true
+    },
+    "touched": true,
+    "easiness": {
+      "checked": true,
+      "id": "3",
+      "name": "给分",
+      "touched": true
+    }
+  },
+  "comment": "下学期由于某些原因，“私奔”老师将不会教我们英语，老师是一个严谨却又不失幽默的人，有机会上到她的课是一种幸福哦！",
+  "homework": {
+    "id": "4",
+    "value": 4,
+    "name": "多"
+  },
+  "courseName": "英语Ⅱ",
+  "courseId": {
+    "__type": "Pointer",
+    "className": "Courses",
+    "objectId": "561da591e4b0d98abf280fc8"
+  },
+  "rating": {
+    "rate3": 5,
+    "overall": 15,
+    "rate2": 5,
+    "rate1": 5
+  },
+  "objectId": "56d6e146d342d30054a55feb",
+  "createdAt": "2016-03-02T12:49:10.837Z",
+  "updatedAt": "2016-03-02T14:31:25.322Z"
+}

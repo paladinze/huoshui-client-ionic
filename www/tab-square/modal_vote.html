@@ -1,0 +1,33 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">你的观点</h1>
+        <button class="button button-clear button-primary" 
+                ng-click="modal_vote.hide()">
+            取消
+        </button>
+    </ion-header-bar>
+
+    <ion-content class="scroll-bg-1">
+
+        <div class="list list-inset">
+            
+        
+        <ion-checkbox ng-model="opinion.for.checked"
+                      ng-change="pushNotificationChange()">
+            支持正方
+        </ion-checkbox>            
+        <ion-checkbox ng-model="opinion.against.checked"
+                      ng-change="pushNotificationChange()">
+            支持反方
+        </ion-checkbox>            
+            
+        <label class="item item-input">
+            <textarea placeholder="请写出你的观点" style="height:200px;" ng-model="feedback.content"></textarea>
+        </label>
+        <button class="button button-full button-positive" ng-click="createContact(newUser)">发送</button>
+
+        </div>
+
+
+    </ion-content>
+</ion-modal-view>

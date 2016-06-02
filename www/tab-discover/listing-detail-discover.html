@@ -1,0 +1,235 @@
+<ion-view view-title="课程评价" cache-view="false" can-swipe-back="true">      
+  <ion-nav-buttons side="right">
+    <button class="button button-clear " ng-click="gotoDetailReview('discover')">
+                    <i class="icon ion-compose"></i>
+      </button>
+  </ion-nav-buttons>   
+     <ion-content class="padding scroll-bg-1" style="padding:0" >
+
+    <!--
+    <ion-refresher pulling-text="刷新请下拉..." on-refresh="doRefresh()"  class="ispinner" spinner="ios">
+    </ion-refresher> 
+    -->
+                  
+        <div class="card card-head" style="margin:0;">
+            <div class="item " style="padding:10px; padding-left:15px;">
+
+                <div class="row">
+                    <div class="col-33" >
+						<div style="width:80%; display:block;">
+                            <img style="width:100%; max-height: 100px" src="img/default-profile.png" >
+						</div>
+                    </div>
+
+					<div class="col-67" >
+                        <div class="row" style="padding:0px">
+                            <p><span style="font-size:18px; color: white;">{{profCourses[0].prof}}
+                                </span>&nbsp;&nbsp;{{profCourses[0].position}}（{{profCourses[0].dept}}）</p>
+                        </div>
+                        <hr style="font-size: 5px;background-color:white; 
+                                   color: white;border-style:solid;
+                                   margin-top:5px;margin-bottom:5px; margin-right:20px">
+						<div class="row" style="padding:0">
+							<div class="col-50" >
+									<p>点名：{{reviewStats.attendanceOverall}}</p> 
+									<p>考试：{{reviewStats.examOverall}}</p>                  
+							</div>
+
+							<div class="col-50" style="margin-left:5px">
+									<p>作业：{{reviewStats.homeworkOverall}}</p>   
+									<p>水分：{{reviewStats.birdOverall}}</p>                 
+							</div>
+						</div>
+                        
+					</div> 
+
+                </div>
+				
+                <div class="item-text-wrap" style="padding-top: 5px;padding-right:10px">
+                  <p>授课：<span ng-repeat="course in profCourses">{{course.name}}{{$last ? '' : '，'}}</span></p>
+                </div>
+                <div class="item-text-wrap" style="padding-right:10px;float:right;margin-top:10px">
+                    <p>
+                        <span ng-click="addToCollection()">
+                            <i class="fa fa-plus-square" ></i> 关注
+                        </span>&nbsp;
+                        <span ng-click="gotoDetailReview('discover')">
+                            <i class="fa fa-dot-circle-o">
+                            </i> 点评
+                        </span>
+                    </p>
+                </div>                
+            </div>
+        </div>    
+         
+         
+         
+         <!--
+        <div class="card card-head" style="margin:0;">
+            <div class="item " style="padding:10px; ">
+
+                <div class="row">
+                    <div class="col-33" >
+						<div style="width:75%;margin-left:auto; margin-right:auto; display:block;">
+                        <img style="width:100%; max-height: 80px" src="img/default-profile.png" >
+						<p style="color: #E54D42; background-color: white; text-align: center;
+								  border-bottom-left-radius: 3px;border-bottom-right-radius: 3px;"
+						   ng-click="addToCollection()">+关注</p>
+						</div>
+                    </div>
+
+					<div class="col-67" >
+						<div class="row" style="padding:0">
+							<div class="col-50" >
+									<p>姓名：{{profCourses[0].prof}}</p>
+									<p>教职：{{profCourses[0].position}}</p> 
+									<p>点名：{{reviewStats.attendanceOverall}}</p> 
+									<p>考试：{{reviewStats.examOverall}}</p>                  
+							</div>
+
+							<div class="col-50" style="margin-left:5px">
+									<p>院系：{{profCourses[0].dept}}</p>
+									<p>校区：{{profCourses[0].campus}}</p>    
+									<p>作业：{{reviewStats.homeworkOverall}}</p>   
+									<p>水份：{{reviewStats.birdOverall}}</p>                 
+							</div>
+						</div>
+
+					</div> 
+
+                </div>
+				
+                <div class="item-text-wrap" style="padding-top: 5px;">
+                  <p><span ng-repeat="course in profCourses"> 《{{course.name}}》 </span></p>
+                </div>
+            </div>
+        </div>            
+    -->
+
+        <div class="card card-review"  >
+            <div class="card-heading">
+                <div class="row" style="padding:0px; text-align:center;">
+                    <div class="col-50">
+                        <p>好评率（{{reviewStats.ratingCount}}人参与）</p>
+                    </div>
+                    <div class="col-50">
+                        <p>综合评分（{{reviewStats.ratingOverall  | number: 1}}分）</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-50" style="border-right: rgba(128, 128, 128, 0.23) thin solid;">
+                        <div class="" style="padding:5px">
+                            <nvd3 options="pieOption" data="pieData"></nvd3>
+                        </div>
+                </div>            
+
+                <div class="col-50">
+                    <!--
+                        <div class="" style="padding:5px">
+                            <nvd3 options="barOption" data="barData"></nvd3>
+                        </div>                    
+                    -->
+
+                        <div class="" style="padding:5px">
+                            <canvas 
+                                id="bar" 
+                                class="chart chart-bar" 
+                                width="100%"
+                                height="80px"
+                                data="barData" 
+                                labels="barLabels" 
+                                legend="false" 
+                                series="barSeries" 
+                                options="{
+                                            scaleOverride: true,
+                                            scaleSteps: 5,
+                                            scaleStepWidth: 1,
+                                            barValueSpacing : 12,
+                                            scaleStartValue: 0
+                                         }">
+                            </canvas>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+		 
+        <div ng-repeat="review in allReviews">
+            <div class="card card-review" >
+				<div class="heading">
+					<div class="row">
+						<div class="col-20">
+                            <span ng-switch on="review.grade">
+                               <img ng-switch-when="0" src='img/bad.png' width="80%">
+                               <img ng-switch-when="1" src='img/okay.png' width="80%">
+                               <img ng-switch-when="2" src='img/good.png' width="80%">
+                               <img ng-switch-default   src='img/bad.png' width="80%">
+                            </span>
+						</div>
+						<div class="col-80">
+							<p>{{review.courseName}}
+								<span style="float:right">
+									{{review.rating.rate1}} / {{review.rating.rate2}} / {{review.rating.rate3}}分
+								</span>
+							</p>
+							<p>{{review.authorName}}，{{review.authorDept}}－{{review.authorYear % 100  | appendZero}}级
+								<span class="date" style="float:right" am-time-ago="review.createdTime">
+								</span>
+							</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="body">
+					<div class="">
+						<p> {{review.comment}}</p>
+					</div>
+					<div class="tags">
+						<p style="margin:0px;" ng-if="review.showTags"> 标签：
+							<span ng-repeat="tag in review.tags">{{tag.value}}{{$last ? '' : '， '}}</span>
+						</p>					
+						<!--
+							<ul class="tags">
+							  <li ng-repeat="tag in review.tags">
+								  <a class="tag">{{tag.value}}</a>
+							  </li>
+							</ul>
+						-->
+					</div>				
+					<div class="dig" style="float:right">
+						  <p class="">
+							  <span ng-click="upVoteIncrement(review, true)" 
+									ng-disabled="review.voted"> 
+								  <i class="fa fa-thumbs-o-up fa"></i>&nbsp;{{review.upVote}}&nbsp;</span>&nbsp;&nbsp;
+							  <span ng-click="upVoteIncrement(review, false)" 
+									ng-disabled="review.voted">
+								  <i class="fa fa-thumbs-o-down fa"></i>&nbsp;{{review.downVote}}&nbsp;</span>
+						  </p>
+					</div>
+				</div>
+            </div>                
+        </div>		 
+		 
+        <!-- no post placeholder -->
+        <div class="placeholder-no-post" ng-if="showNoPostPlaceholder">
+            <div class="card card-review" 
+                 style="height: 150px">
+                <p style=" font-size: 14px;
+                        text-align: center;
+                        margin-top: 45px;       
+                          ">
+                    该老师目前没啥人气...
+                </p>
+         
+            </div>
+        </div> 
+   
+         
+         
+        
+    <ion-infinite-scroll on-infinite="loadMore()" distance="1%"  ng-if="!noOldPosts" class="ispinner" spinner="ripple">
+    </ion-infinite-scroll>      
+         
+    </ion-content>
+</ion-view>
