@@ -25,9 +25,7 @@ angular.module('starter', ['ionic',
   'angular.filter',
   'nvd3',
   'angularMoment',
-  'jett.ionic.filter.bar',
-  'angulartics',
-  'angulartics.google.analytics'
+  'jett.ionic.filter.bar'
 ])
 
 

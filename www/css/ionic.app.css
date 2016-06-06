@@ -1255,7 +1255,7 @@ div.user-add-course-prompt p {
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -5136,43 +5136,27 @@ div.user-add-course-prompt p {
     .bootstrap input[type="datetime-local"].form-control,
     .bootstrap input[type="month"].form-control {
       line-height: 34px; }
-    .bootstrap input[type="date"].input-sm, .bootstrap .input-group-sm > input[type="date"].form-control,
-    .bootstrap .input-group-sm > input[type="date"].input-group-addon,
-    .bootstrap .input-group-sm > .input-group-btn > input[type="date"].btn,
+    .bootstrap input[type="date"].input-sm, .bootstrap .input-group-sm > input[type="date"].form-control, .bootstrap .input-group-sm > input[type="date"].input-group-addon, .bootstrap .input-group-sm > .input-group-btn > input[type="date"].btn,
     .input-group-sm .bootstrap input[type="date"],
-    .bootstrap input[type="time"].input-sm, .bootstrap .input-group-sm > input[type="time"].form-control,
-    .bootstrap .input-group-sm > input[type="time"].input-group-addon,
-    .bootstrap .input-group-sm > .input-group-btn > input[type="time"].btn,
+    .bootstrap input[type="time"].input-sm, .bootstrap .input-group-sm > input[type="time"].form-control, .bootstrap .input-group-sm > input[type="time"].input-group-addon, .bootstrap .input-group-sm > .input-group-btn > input[type="time"].btn,
     .input-group-sm
     .bootstrap input[type="time"],
-    .bootstrap input[type="datetime-local"].input-sm, .bootstrap .input-group-sm > input[type="datetime-local"].form-control,
-    .bootstrap .input-group-sm > input[type="datetime-local"].input-group-addon,
-    .bootstrap .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
+    .bootstrap input[type="datetime-local"].input-sm, .bootstrap .input-group-sm > input[type="datetime-local"].form-control, .bootstrap .input-group-sm > input[type="datetime-local"].input-group-addon, .bootstrap .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
     .input-group-sm
     .bootstrap input[type="datetime-local"],
-    .bootstrap input[type="month"].input-sm, .bootstrap .input-group-sm > input[type="month"].form-control,
-    .bootstrap .input-group-sm > input[type="month"].input-group-addon,
-    .bootstrap .input-group-sm > .input-group-btn > input[type="month"].btn,
+    .bootstrap input[type="month"].input-sm, .bootstrap .input-group-sm > input[type="month"].form-control, .bootstrap .input-group-sm > input[type="month"].input-group-addon, .bootstrap .input-group-sm > .input-group-btn > input[type="month"].btn,
     .input-group-sm
     .bootstrap input[type="month"] {
       line-height: 30px; }
-    .bootstrap input[type="date"].input-lg, .bootstrap .input-group-lg > input[type="date"].form-control,
-    .bootstrap .input-group-lg > input[type="date"].input-group-addon,
-    .bootstrap .input-group-lg > .input-group-btn > input[type="date"].btn,
+    .bootstrap input[type="date"].input-lg, .bootstrap .input-group-lg > input[type="date"].form-control, .bootstrap .input-group-lg > input[type="date"].input-group-addon, .bootstrap .input-group-lg > .input-group-btn > input[type="date"].btn,
     .input-group-lg .bootstrap input[type="date"],
-    .bootstrap input[type="time"].input-lg, .bootstrap .input-group-lg > input[type="time"].form-control,
-    .bootstrap .input-group-lg > input[type="time"].input-group-addon,
-    .bootstrap .input-group-lg > .input-group-btn > input[type="time"].btn,
+    .bootstrap input[type="time"].input-lg, .bootstrap .input-group-lg > input[type="time"].form-control, .bootstrap .input-group-lg > input[type="time"].input-group-addon, .bootstrap .input-group-lg > .input-group-btn > input[type="time"].btn,
     .input-group-lg
     .bootstrap input[type="time"],
-    .bootstrap input[type="datetime-local"].input-lg, .bootstrap .input-group-lg > input[type="datetime-local"].form-control,
-    .bootstrap .input-group-lg > input[type="datetime-local"].input-group-addon,
-    .bootstrap .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
+    .bootstrap input[type="datetime-local"].input-lg, .bootstrap .input-group-lg > input[type="datetime-local"].form-control, .bootstrap .input-group-lg > input[type="datetime-local"].input-group-addon, .bootstrap .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
     .input-group-lg
     .bootstrap input[type="datetime-local"],
-    .bootstrap input[type="month"].input-lg, .bootstrap .input-group-lg > input[type="month"].form-control,
-    .bootstrap .input-group-lg > input[type="month"].input-group-addon,
-    .bootstrap .input-group-lg > .input-group-btn > input[type="month"].btn,
+    .bootstrap input[type="month"].input-lg, .bootstrap .input-group-lg > input[type="month"].form-control, .bootstrap .input-group-lg > input[type="month"].input-group-addon, .bootstrap .input-group-lg > .input-group-btn > input[type="month"].btn,
     .input-group-lg
     .bootstrap input[type="month"] {
       line-height: 46px; } }
@@ -5238,32 +5222,20 @@ div.user-add-course-prompt p {
     padding-bottom: 7px;
     margin-bottom: 0;
     min-height: 34px; }
-    .bootstrap .form-control-static.input-lg, .bootstrap .input-group-lg > .form-control-static.form-control,
-    .bootstrap .input-group-lg > .form-control-static.input-group-addon,
-    .bootstrap .input-group-lg > .input-group-btn > .form-control-static.btn, .bootstrap .form-control-static.input-sm, .bootstrap .input-group-sm > .form-control-static.form-control,
-    .bootstrap .input-group-sm > .form-control-static.input-group-addon,
-    .bootstrap .input-group-sm > .input-group-btn > .form-control-static.btn {
+    .bootstrap .form-control-static.input-lg, .bootstrap .input-group-lg > .form-control-static.form-control, .bootstrap .input-group-lg > .form-control-static.input-group-addon, .bootstrap .input-group-lg > .input-group-btn > .form-control-static.btn, .bootstrap .form-control-static.input-sm, .bootstrap .input-group-sm > .form-control-static.form-control, .bootstrap .input-group-sm > .form-control-static.input-group-addon, .bootstrap .input-group-sm > .input-group-btn > .form-control-static.btn {
       padding-left: 0;
       padding-right: 0; }
-  .bootstrap .input-sm, .bootstrap .input-group-sm > .form-control,
-  .bootstrap .input-group-sm > .input-group-addon,
-  .bootstrap .input-group-sm > .input-group-btn > .btn {
+  .bootstrap .input-sm, .bootstrap .input-group-sm > .form-control, .bootstrap .input-group-sm > .input-group-addon, .bootstrap .input-group-sm > .input-group-btn > .btn {
     height: 30px;
     padding: 5px 10px;
     font-size: 12px;
     line-height: 1.5;
     border-radius: 3px; }
-  .bootstrap select.input-sm, .bootstrap .input-group-sm > select.form-control,
-  .bootstrap .input-group-sm > select.input-group-addon,
-  .bootstrap .input-group-sm > .input-group-btn > select.btn {
+  .bootstrap select.input-sm, .bootstrap .input-group-sm > select.form-control, .bootstrap .input-group-sm > select.input-group-addon, .bootstrap .input-group-sm > .input-group-btn > select.btn {
     height: 30px;
     line-height: 30px; }
-  .bootstrap textarea.input-sm, .bootstrap .input-group-sm > textarea.form-control,
-  .bootstrap .input-group-sm > textarea.input-group-addon,
-  .bootstrap .input-group-sm > .input-group-btn > textarea.btn,
-  .bootstrap select[multiple].input-sm, .bootstrap .input-group-sm > select[multiple].form-control,
-  .bootstrap .input-group-sm > select[multiple].input-group-addon,
-  .bootstrap .input-group-sm > .input-group-btn > select[multiple].btn {
+  .bootstrap textarea.input-sm, .bootstrap .input-group-sm > textarea.form-control, .bootstrap .input-group-sm > textarea.input-group-addon, .bootstrap .input-group-sm > .input-group-btn > textarea.btn,
+  .bootstrap select[multiple].input-sm, .bootstrap .input-group-sm > select[multiple].form-control, .bootstrap .input-group-sm > select[multiple].input-group-addon, .bootstrap .input-group-sm > .input-group-btn > select[multiple].btn {
     height: auto; }
   .bootstrap .form-group-sm .form-control {
     height: 30px;
@@ -5283,25 +5255,17 @@ div.user-add-course-prompt p {
     padding: 6px 10px;
     font-size: 12px;
     line-height: 1.5; }
-  .bootstrap .input-lg, .bootstrap .input-group-lg > .form-control,
-  .bootstrap .input-group-lg > .input-group-addon,
-  .bootstrap .input-group-lg > .input-group-btn > .btn {
+  .bootstrap .input-lg, .bootstrap .input-group-lg > .form-control, .bootstrap .input-group-lg > .input-group-addon, .bootstrap .input-group-lg > .input-group-btn > .btn {
     height: 46px;
     padding: 10px 16px;
     font-size: 18px;
     line-height: 1.33333;
     border-radius: 6px; }
-  .bootstrap select.input-lg, .bootstrap .input-group-lg > select.form-control,
-  .bootstrap .input-group-lg > select.input-group-addon,
-  .bootstrap .input-group-lg > .input-group-btn > select.btn {
+  .bootstrap select.input-lg, .bootstrap .input-group-lg > select.form-control, .bootstrap .input-group-lg > select.input-group-addon, .bootstrap .input-group-lg > .input-group-btn > select.btn {
     height: 46px;
     line-height: 46px; }
-  .bootstrap textarea.input-lg, .bootstrap .input-group-lg > textarea.form-control,
-  .bootstrap .input-group-lg > textarea.input-group-addon,
-  .bootstrap .input-group-lg > .input-group-btn > textarea.btn,
-  .bootstrap select[multiple].input-lg, .bootstrap .input-group-lg > select[multiple].form-control,
-  .bootstrap .input-group-lg > select[multiple].input-group-addon,
-  .bootstrap .input-group-lg > .input-group-btn > select[multiple].btn {
+  .bootstrap textarea.input-lg, .bootstrap .input-group-lg > textarea.form-control, .bootstrap .input-group-lg > textarea.input-group-addon, .bootstrap .input-group-lg > .input-group-btn > textarea.btn,
+  .bootstrap select[multiple].input-lg, .bootstrap .input-group-lg > select[multiple].form-control, .bootstrap .input-group-lg > select[multiple].input-group-addon, .bootstrap .input-group-lg > .input-group-btn > select[multiple].btn {
     height: auto; }
   .bootstrap .form-group-lg .form-control {
     height: 46px;
@@ -5336,17 +5300,13 @@ div.user-add-course-prompt p {
     line-height: 34px;
     text-align: center;
     pointer-events: none; }
-  .bootstrap .input-lg + .form-control-feedback, .bootstrap .input-group-lg > .form-control + .form-control-feedback,
-  .bootstrap .input-group-lg > .input-group-addon + .form-control-feedback,
-  .bootstrap .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
+  .bootstrap .input-lg + .form-control-feedback, .bootstrap .input-group-lg > .form-control + .form-control-feedback, .bootstrap .input-group-lg > .input-group-addon + .form-control-feedback, .bootstrap .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
   .bootstrap .input-group-lg + .form-control-feedback,
   .bootstrap .form-group-lg .form-control + .form-control-feedback {
     width: 46px;
     height: 46px;
     line-height: 46px; }
-  .bootstrap .input-sm + .form-control-feedback, .bootstrap .input-group-sm > .form-control + .form-control-feedback,
-  .bootstrap .input-group-sm > .input-group-addon + .form-control-feedback,
-  .bootstrap .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
+  .bootstrap .input-sm + .form-control-feedback, .bootstrap .input-group-sm > .form-control + .form-control-feedback, .bootstrap .input-group-sm > .input-group-addon + .form-control-feedback, .bootstrap .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
   .bootstrap .input-group-sm + .form-control-feedback,
   .bootstrap .form-group-sm .form-control + .form-control-feedback {
     width: 30px;
@@ -6140,15 +6100,11 @@ div.user-add-course-prompt p {
     background-color: #eeeeee;
     border: 1px solid #ccc;
     border-radius: 4px; }
-    .bootstrap .input-group-addon.input-sm,
-    .bootstrap .input-group-sm > .input-group-addon,
-    .bootstrap .input-group-sm > .input-group-btn > .input-group-addon.btn {
+    .bootstrap .input-group-addon.input-sm, .bootstrap .input-group-sm > .input-group-addon, .bootstrap .input-group-sm > .input-group-btn > .input-group-addon.btn {
       padding: 5px 10px;
       font-size: 12px;
       border-radius: 3px; }
-    .bootstrap .input-group-addon.input-lg,
-    .bootstrap .input-group-lg > .input-group-addon,
-    .bootstrap .input-group-lg > .input-group-btn > .input-group-addon.btn {
+    .bootstrap .input-group-addon.input-lg, .bootstrap .input-group-lg > .input-group-addon, .bootstrap .input-group-lg > .input-group-btn > .input-group-addon.btn {
       padding: 10px 16px;
       font-size: 18px;
       border-radius: 6px; }
