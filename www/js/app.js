@@ -254,13 +254,11 @@ angular.module('starter', ['ionic',
 
 
 .run(function(amMoment) {
-  //set time formatting locale to chinese
   amMoment.changeLocale('zh-cn');
 })
 
 
 .config(function($ionicConfigProvider) {
-  //ionic system wider setting
   $ionicConfigProvider.tabs.position('bottom');
   $ionicConfigProvider.navBar.alignTitle('center');
   $ionicConfigProvider.tabs.style('standard');
@@ -269,10 +267,7 @@ angular.module('starter', ['ionic',
   $ionicConfigProvider.views.forwardCache(false);
   $ionicConfigProvider.form.toggle('large');
   $ionicConfigProvider.views.transition('ios');
-  //$ionicConfigProvider.views.transition('none');
-  //$ionicConfigProvider.backButton.previousTitleText(false);
   $ionicConfigProvider.backButton.text('');
-  //$ionicConfigProvider.backButton.icon('ion-arrow-left-c');
 })
 
 .config(function($ionicFilterBarConfigProvider) {
@@ -280,16 +275,6 @@ angular.module('starter', ['ionic',
   $ionicFilterBarConfigProvider.theme('positive');
   $ionicFilterBarConfigProvider.placeholder("请输入过滤用的关键词");
 })
-
-/*
-.config(function(){
-    var $config = {
-        //...
-       };
-
-    $('.social-share').share($config);
-})
-*/
 
 
 
@@ -325,46 +310,6 @@ angular.module('starter', ['ionic',
   })
 
   // Each tab has its own nav history stack:
-
-  .state('tab.square', {
-    url: '/square',
-    views: {
-      'tab-square': {
-        templateUrl: 'tab-square/square.html',
-        controller: 'SquareCtrl'
-      }
-    }
-  })
-
-  .state('tab.debate-detail', {
-    url: '/debate-detail',
-    views: {
-      'tab-square': {
-        templateUrl: 'tab-square/debate-detail.html',
-        controller: 'DebateDetailCtrl'
-      }
-    }
-  })
-
-  .state('tab.debate-candidate', {
-    url: '/debate-candidate',
-    views: {
-      'tab-square': {
-        templateUrl: 'tab-square/debate-candidate.html',
-        controller: 'DebateCandidateCtrl'
-      }
-    }
-  })
-
-  .state('tab.debate-history', {
-    url: '/debate-history',
-    views: {
-      'tab-square': {
-        templateUrl: 'tab-square/debate-history.html',
-        controller: 'DebateHistoryCtrl'
-      }
-    }
-  })
 
   .state('tab.listing', {
       url: '/listing',
@@ -552,53 +497,17 @@ angular.module('starter', ['ionic',
     }
   })
 
-  .state('tab.me-vote', {
-    url: '/me-vote',
+
+  .state('tab.feedback', {
+    url: '/feedback',
     views: {
       'tab-me': {
-        templateUrl: 'tab-me/vote.html',
-        controller: 'MeVoteCtrl'
+        templateUrl: 'tab-me/feedback.html',
+        controller: 'MeFeedbackCtrl'
       }
     }
   })
 
-  .state('tab.secret', {
-      url: '/secret',
-      views: {
-        'tab-me': {
-          templateUrl: 'tab-me/secret.html',
-          controller: 'MeCtrl'
-        }
-      }
-    })
-    .state('tab.feedback', {
-      url: '/feedback',
-      views: {
-        'tab-me': {
-          templateUrl: 'tab-me/feedback.html',
-          controller: 'MeFeedbackCtrl'
-        }
-      }
-    })
-
-  .state('tab.me-chat-list', {
-      url: '/chat-list',
-      views: {
-        'tab-me': {
-          templateUrl: 'tab-me/chat-list.html',
-          controller: 'MeChatListCtrl'
-        }
-      }
-    })
-    .state('tab.me-chat-detail', {
-      url: '/chat-detail/{roomId}',
-      views: {
-        'tab-me': {
-          templateUrl: 'tab-me/chat-detail.html',
-          controller: 'MeChatDetailCtrl'
-        }
-      }
-    });
 
   // if none of the above states are matched, use this as the fallback
   //$urlRouterProvider.otherwise('/login.html');
