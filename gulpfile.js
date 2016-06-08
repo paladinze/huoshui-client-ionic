@@ -4,9 +4,10 @@ var bower = require('bower');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
-
+var gulpif = require('gulp-if');
 var templateCache = require('gulp-angular-templatecache');
 var ngAnnotate = require('gulp-ng-annotate');
 var useref = require('gulp-useref');
@@ -18,7 +19,7 @@ var paths = {
 
 
 
-gulp.task('default', ['sass', 'templatecache']);
+gulp.task('default', ['sass', 'templatecache', 'useref', 'moveImages']);
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
@@ -46,7 +47,33 @@ gulp.task('templatecache', ['sass'], function(done) {
     .on('end', done);
 });
 
+//reanotate angular js files
+gulp.task('ng_annotate', ['sass', 'templatecache'], function(done) {
+  gulp.src('./www/js/**/*.js')
+    .pipe(ngAnnotate({
+      single_quotes: true
+    }))
+    .pipe(gulp.dest('./www/dist/js'))
+    .on('end', done);
+});
 
+//generate aggregated index.html and js and css bundles
+gulp.task('useref', ['sass', 'templatecache'], function(done) {
+  gulp.src('./www/*.html')
+    .pipe(useref())
+    //.pipe(gulpif('*.js', uglify()))
+    .pipe(gulp.dest('./www/dist'))
+    .on('end', done);
+});
+
+//move imgs to dist
+gulp.task('moveImages', function(done) {
+  gulp.src('./www/img/*')
+    .pipe(gulp.dest('./www/dist/img'));
+  gulp.src('./www/*.ico')
+    .pipe(gulp.dest('./www/dist'))
+    .on('end', done);
+});
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
