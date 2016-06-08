@@ -201,7 +201,9 @@ angular.module('starter', ['ionic',
     });
   };
 
-
+  // Initailze Leancloud MBaSS
+  AV.initialize('zwjjm3MbxDYRKny9f31amkXq',
+    'PczcQb9HEBCLtLj4ohJ7ePj5');
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -229,9 +231,7 @@ angular.module('starter', ['ionic',
     if (window.Connection && navigator.connection.type == Connection.NONE) {
       showNoConnection();
     } else {
-      // Initailze Leancloud MBaSS
-      AV.initialize('zwjjm3MbxDYRKny9f31amkXq',
-        'PczcQb9HEBCLtLj4ohJ7ePj5');
+
 
       var currentUser = AV.User.current();
       if (currentUser) {
