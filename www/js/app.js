@@ -6,11 +6,8 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic',
-  'starter.controllers',
   'login.controllers',
   'signup.controllers',
-  'tabs.controllers',
-  'square.controllers',
   'listing.controllers',
   'discover.controllers',
   'rank.controllers',
@@ -305,8 +302,7 @@ angular.module('starter', ['ionic',
   .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'tabs/tabs.html',
-    controller: 'TabsCtrl'
+    templateUrl: 'tabs/tabs.html'
   })
 
   // Each tab has its own nav history stack:

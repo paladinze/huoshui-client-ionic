@@ -30,7 +30,7 @@ $item-font-size:                  16px !default;
 /*-----------------------------------------------------
 * Content Color
 ------------------------------------------------------*/
-$positive:                      #E54D42  !default;  //rgba(234,103,110,1) !default;//#E54D42  !default;   
+$positive:                      #E54D42  !default;  //rgba(234,103,110,1) !default;//#E54D42  !default;
 $positive-transparent:              rgba(229, 77, 66, 0.15);
 
 //$light:                          rgba(241,241,241,1) !default; //caution, may be harmful
@@ -77,7 +77,7 @@ $login-background:              #D0554C;
 
 ion-header-bar.bar.bar-subheader.item-input-inset.bar-header {
     background-color: $positive !important;
-	border-top: 1px solid white;   
+	border-top: 1px solid white;
 	color: white;
 }
 ion-header-bar.bar.bar-subheader label.item-input-wrapper {
@@ -86,7 +86,7 @@ ion-header-bar.bar.bar-subheader label.item-input-wrapper {
 
 ion-header-bar.bar.bar-header.item-input-inset.bar-header {
     background-color: $positive !important;
-	//border-top: 1px solid white;   
+	//border-top: 1px solid white;
 	color: white;
 }
 ion-header-bar.bar.bar-header label.item-input-wrapper {
@@ -97,7 +97,7 @@ ion-header-bar.bar.bar-header label.item-input-wrapper {
 
 .ion-ios-search input{
 	color: white;
-} 
+}
 
 
 .text-limit-lines {
@@ -182,14 +182,14 @@ button.col.button-clear {
 //webview
 
 #secret div.scroll{
-    height: 100%; 
+    height: 100%;
 }
 
 .webpage {
     width: 100%;
     height: 100%;
     border: 0px solid #EAAB00;
-    padding: 0rem;  
+    padding: 0rem;
 }
 
 .radio-icon {
@@ -198,13 +198,13 @@ button.col.button-clear {
 
 
 .img-banner {
-    
+
   width: 100%;
   padding-bottom: 30%;
-    background-size:   cover;                      
+    background-size:   cover;
     background-repeat: no-repeat;
-    //background-position: center center;   
-    
+    //background-position: center center;
+
 }
 
 .img-banner p{
@@ -213,8 +213,8 @@ button.col.button-clear {
   bottom: 20px;
   left: 20px;
   color: white;
-  margin: 0;    
-    
+  margin: 0;
+
 }
 
 .img-banner h2{
@@ -223,8 +223,8 @@ button.col.button-clear {
   top: 20px;
   left: 20px;
   color: white;
-  margin: 0;    
-    
+  margin: 0;
+
 }
 
 .keyboard-open .tabs{
@@ -244,8 +244,6 @@ button.col.button-clear {
 //Import Search scss
 @import 'scss/search-subheader';
 
-//Import Chat scss
-@import 'scss/chat';
 
 //Import profile scss
 @import 'scss/profile';
@@ -284,21 +282,14 @@ button.col.button-clear {
 @import 'scss/search-prompt';
 
 //Import font awesome
-@import "www/lib/font-awesome/scss/font-awesome";  
-
-//Import Bootstrap SASS
-.bootstrap {
-    @import "www/lib/bootstrap-sass/assets/stylesheets/bootstrap";
-}
-//
+@import "www/lib/font-awesome/scss/font-awesome";
 
 
 // Include all of Ionic (Important: must load last)
 @import "www/lib/ionic/scss/ionic";
 
-// Inlude filter bar 
+// Inlude filter bar
 @import  "www/lib/ionic-filter-bar/scss/ionic.filter.bar";
-
 
 /*
 

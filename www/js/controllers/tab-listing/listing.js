@@ -187,17 +187,6 @@ angular.module('listing.controllers', [])
     prof: $stateParams.listingId
   };
 
-  $scope.showSharingOptions = function() {
-    var alertPopup = $ionicPopup.alert({
-      title: '分享选项',
-      scope: $scope,
-      templateUrl: 'common/sharing-options.html',
-      okText: '分享完成',
-    });
-    alertPopup.then(function(res) {});
-  };
-
-
 
   /*----------------------------------------------------------------
   Add course to personal collection
