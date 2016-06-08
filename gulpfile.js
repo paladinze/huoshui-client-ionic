@@ -18,7 +18,7 @@ var paths = {
 
 
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass', 'templatecache']);
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
@@ -35,6 +35,18 @@ gulp.task('sass', function(done) {
     .pipe(gulp.dest('./www/css/'))
     .on('end', done);
 });
+
+//generate ./www/js/templates/templates.js
+gulp.task('templatecache', ['sass'], function(done) {
+  gulp.src('./www/templates/**/*.html')
+    .pipe(templateCache({
+      standalone: true
+    }))
+    .pipe(gulp.dest('./www/js/templates'))
+    .on('end', done);
+});
+
+
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
