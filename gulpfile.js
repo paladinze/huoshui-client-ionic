@@ -19,7 +19,9 @@ var paths = {
 
 
 
-gulp.task('default', ['sass', 'templatecache', 'useref', 'moveImages']);
+gulp.task('default', ['sass', 'templatecache', 'useref', 'moveImages',
+  'moveFonts'
+]);
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
@@ -72,6 +74,13 @@ gulp.task('moveImages', function(done) {
     .pipe(gulp.dest('./www/dist/img'));
   gulp.src('./www/*.ico')
     .pipe(gulp.dest('./www/dist'))
+    .on('end', done);
+});
+
+//move imgs to dist
+gulp.task('moveFonts', function(done) {
+  gulp.src('./www/fonts/**/*')
+    .pipe(gulp.dest('./www/dist/fonts'))
     .on('end', done);
 });
 
